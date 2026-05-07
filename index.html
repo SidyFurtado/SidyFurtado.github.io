@@ -8,6 +8,10 @@
     <meta name="description"
         content="Portfólio de Sidy Furtado, Produtor Audiovisual. Confira meus trabalhos em vídeo e produção.">
 
+    <!-- Ícone da Aba do Navegador (Favicon) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050505'/><circle cx='50' cy='50' r='35' fill='none' stroke='%23ffffff' stroke-width='5'/><path d='M43 35 L43 65 L68 50 Z' fill='%23ffffff'/></svg>">
+
     <!-- Open Graph / Redes Sociais -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sidy Furtado | Produtor Audiovisual">
@@ -20,6 +24,141 @@
 
     <!-- Skills: AOS & GLightbox CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Ajuste Responsivo do Título Principal -->
+    <style>
+        .hero-content {
+            max-width: 1000px !important;
+            /* Aumenta a largura do contêiner para o texto caber lado a lado */
+            margin-inline: auto;
+            /* Mantém o bloco centralizado */
+        }
+
+        .hero .title {
+            font-size: clamp(1.8rem, 4vw + 1rem, 3.8rem) !important;
+            /* Fonte fluida: grande no PC, menor no celular */
+            line-height: 1.1 !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero .title br {
+                display: none;
+                /* No celular, removemos a quebra forçada para o texto se adaptar à tela naturalmente */
+            }
+        }
+
+        /* Layout da seção Sobre com a foto */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+            /* Efeito de zoom suave ao passar o mouse */
+        }
+
+        .about-content {
+            flex: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        /* Estilo do Logo Textual (Header) */
+        header .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            cursor: pointer;
+            /* Indica que é clicável */
+        }
+
+        /* Ponto de gravação (REC) cinematográfico */
+        header .logo .rec-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ff3333;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff3333;
+            margin-right: 12px;
+            animation: pulse-rec 2s infinite ease-in-out;
+        }
+
+        /* Container para o texto do logo empilhado */
+        header .logo .logo-text-container {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.9;
+        }
+
+        @keyframes pulse-rec {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        header .logo .logo-first {
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        header .logo .logo-second {
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            color: #ffffff;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header .logo .logo-first {
+                font-size: 1.4rem;
+            }
+
+            header .logo .logo-second {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+            }
+
+            header .logo .rec-dot {
+                width: 8px;
+                height: 8px;
+                margin-right: 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,8 +167,13 @@
     <div class="ambient-light-2"></div>
 
     <header>
-        <div class="logo">
-            <span class="neon-text">SIDY</span> FURTADO
+        <!-- Adicionado um evento de clique para rolar para o topo suavemente, agindo como um logo real -->
+        <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <div class="rec-dot"></div>
+            <div class="logo-text-container">
+                <span class="logo-first neon-text">SIDY</span>
+                <span class="logo-second">FURTADO</span>
+            </div>
         </div>
         <nav>
             <ul>
@@ -46,8 +190,9 @@
         <section id="home" class="hero" data-aos="fade-in">
             <div class="hero-content">
                 <h2 class="subtitle">Muito além do botão REC.</h2>
-                <h1 class="title">Atenção retida. Valor elevado. <span class="neon-text">Narrativas visuais</span> que
-                    geram lucro.</h1>
+                <h1 class="title">Atenção retida. Valor elevado.<br>
+                    <span class="neon-text">Narrativas visuais</span> que geram lucro.
+                </h1>
                 <p>Dirijo, capto e finalizo campanhas que transformam ideias brutas em impacto emocional, estética
                     premium e resultados tangíveis para o seu negócio.</p>
                 <a href="#portfolio" class="cta-button">Assistir aos Cases</a>
@@ -55,16 +200,27 @@
         </section>
 
         <section id="about" class="about">
-            <div class="about-content glass-card" data-aos="fade-up">
-                <h2>A engenharia por trás da imagem e do <span class="neon-text">ritmo perfeito.</span></h2>
-                <p>No mercado de alto padrão, a escolha de uma lente ou um frame a mais na edição não são detalhes
-                    estéticos. São a diferença entre o seu cliente assistir até o final ou rolar o feed.</p>
-                <p>Meu nome é Sidy Furtado. Como filmmaker, assumo o controle da sua narrativa de ponta a ponta: do set
-                    de gravação à ilha de edição. Tenho conduzido a visão audiovisual de projetos de alta performance,
-                    desde documentários de esportes extremos até campanhas corporativas para gigantes do mercado.</p>
-                <p>Minha câmera e minha ilha funcionam com um único objetivo: proteger a essência do projeto, garantir
-                    segurança na entrega e criar uma estética que prende a atenção do primeiro ao último segundo. Sem
-                    dores de cabeça no set, sem refações infinitas na pós. Apenas a visão exata para a sua mensagem.</p>
+            <div class="about-container">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="Fotos/Sidy.png" alt="Sidy Furtado em captação">
+                </div>
+                <div class="about-content glass-card" data-aos="fade-left">
+                    <h2>A engenharia por trás da imagem e do <span class="neon-text">ritmo perfeito.</span></h2>
+                    <p>No mercado de alto padrão, a escolha de uma lente ou um frame a mais na edição não são detalhes
+                        estéticos. São a diferença entre o seu cliente assistir até o final ou rolar o feed.</p>
+                    <p>Meu nome é Sidy Furtado. Como filmmaker, assumo o controle da sua narrativa de ponta a ponta: do
+                        set
+                        de gravação à ilha de edição. Tenho conduzido a visão audiovisual de projetos de alta
+                        performance,
+                        desde documentários de esportes extremos até campanhas corporativas para gigantes do mercado.
+                    </p>
+                    <p>Minha câmera e minha ilha funcionam com um único objetivo: proteger a essência do projeto,
+                        garantir
+                        segurança na entrega e criar uma estética que prende a atenção do primeiro ao último segundo.
+                        Sem
+                        dores de cabeça no set, sem refações infinitas na pós. Apenas a visão exata para a sua mensagem.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -149,9 +305,8 @@
                         data-src="https://www.youtube-nocookie.com/embed/3f8hRJqJYcE?autoplay=1&rel=0&enablejsapi=1"
                         data-youtube-url="https://www.youtube.com/watch?v=3f8hRJqJYcE">
                         <div class="thumbnail-container">
-                            <img src="https://img.youtube.com/vi/3f8hRJqJYcE/hqdefault.jpg?v=novo"
-                                alt="A frota mais mágica do mundo" loading="lazy"
-                                onerror="this.onerror=null; this.src='https://img.youtube.com/vi/3f8hRJqJYcE/hqdefault.jpg';">
+                            <img src="https://img.youtube.com/vi/3f8hRJqJYcE/0.jpg" alt="Título do Vídeo" loading="lazy"
+                                onerror="this.onerror=null; this.src='https://img.youtube.com/vi/3f8hRJqJYcE/mqdefault.jpg';">
                             <div class="play-button">&#9658;</div>
                         </div>
                     </div>
