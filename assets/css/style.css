@@ -627,3 +627,121 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Ajuste Responsivo do Título Principal */
+.hero-content {
+    max-width: 1000px !important;
+    margin-inline: auto;
+}
+
+.hero .title {
+    font-size: clamp(1.8rem, 4vw + 1rem, 3.8rem) !important;
+    line-height: 1.1 !important;
+}
+
+@media (max-width: 768px) {
+    .hero .title br {
+        display: none;
+    }
+}
+
+/* Estilo do Logo Textual (Header) */
+header .logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Ponto de gravação (REC) cinematográfico */
+header .logo .rec-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ff3333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff3333;
+    margin-right: 12px;
+    animation: pulse-rec 2s infinite ease-in-out;
+}
+
+/* Container para o texto do logo empilhado */
+header .logo .logo-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+}
+
+@keyframes pulse-rec {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+header .logo .logo-first {
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+header .logo .logo-second {
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    header .logo .logo-first {
+        font-size: 1.4rem;
+    }
+    header .logo .logo-second {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    header .logo .rec-dot {
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+    }
+}
+
+/* Layout da seção Sobre com a foto */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-content {
+    flex: 1.2;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

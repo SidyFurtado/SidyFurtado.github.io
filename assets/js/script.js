@@ -19,26 +19,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efeito de fade-in ao scroll para os cards do portfólio
-const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.glass-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.4s ease, border-color 0.4s ease';
-    observer.observe(card);
-});
-
 // Custom Video Modal Logic
 const videoModal = document.getElementById('video-modal');
 const modalIframeContainer = document.getElementById('modal-iframe-container');

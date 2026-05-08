@@ -19,146 +19,16 @@
         content="Transformando ideias em experiências. Direção, edição e produção audiovisual de alto impacto.">
     <meta property="og:image" content="https://img.youtube.com/vi/z_Ohu6l46H0/maxresdefault.jpg?v=novo">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://img.youtube.com">
+    <link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net">
+
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Skills: AOS & GLightbox CSS -->
+    <!-- Animações: AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Ajuste Responsivo do Título Principal -->
-    <style>
-        .hero-content {
-            max-width: 1000px !important;
-            /* Aumenta a largura do contêiner para o texto caber lado a lado */
-            margin-inline: auto;
-            /* Mantém o bloco centralizado */
-        }
-
-        .hero .title {
-            font-size: clamp(1.8rem, 4vw + 1rem, 3.8rem) !important;
-            /* Fonte fluida: grande no PC, menor no celular */
-            line-height: 1.1 !important;
-        }
-
-        @media (max-width: 768px) {
-            .hero .title br {
-                display: none;
-                /* No celular, removemos a quebra forçada para o texto se adaptar à tela naturalmente */
-            }
-        }
-
-        /* Layout da seção Sobre com a foto */
-        .about-container {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-            /* Efeito de zoom suave ao passar o mouse */
-        }
-
-        .about-content {
-            flex: 1.2;
-        }
-
-        @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column;
-                gap: 2rem;
-            }
-        }
-
-        /* Estilo do Logo Textual (Header) */
-        header .logo {
-            display: flex;
-            align-items: center;
-            font-family: 'Outfit', sans-serif;
-            text-transform: uppercase;
-            cursor: pointer;
-            /* Indica que é clicável */
-        }
-
-        /* Ponto de gravação (REC) cinematográfico */
-        header .logo .rec-dot {
-            width: 10px;
-            height: 10px;
-            background-color: #ff3333;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #ff3333;
-            margin-right: 12px;
-            animation: pulse-rec 2s infinite ease-in-out;
-        }
-
-        /* Container para o texto do logo empilhado */
-        header .logo .logo-text-container {
-            display: flex;
-            flex-direction: column;
-            line-height: 0.9;
-        }
-
-        @keyframes pulse-rec {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.3;
-            }
-        }
-
-        header .logo .logo-first {
-            font-weight: 800;
-            font-size: 1.8rem;
-            letter-spacing: -0.5px;
-        }
-
-        header .logo .logo-second {
-            font-weight: 300;
-            font-size: 1.1rem;
-            letter-spacing: 4px;
-            color: #ffffff;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            header .logo .logo-first {
-                font-size: 1.4rem;
-            }
-
-            header .logo .logo-second {
-                font-size: 0.9rem;
-                letter-spacing: 2px;
-            }
-
-            header .logo .rec-dot {
-                width: 8px;
-                height: 8px;
-                margin-right: 8px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -201,10 +71,7 @@
 
         <section id="about" class="about">
             <div class="about-container">
-                <div class="about-image" data-aos="fade-right">
-                    <img src="Fotos/Sidy.png" alt="Sidy Furtado em captação">
-                </div>
-                <div class="about-content glass-card" data-aos="fade-left">
+                <div class="about-content glass-card" data-aos="fade-up">
                     <h2>A engenharia por trás da imagem e do <span class="neon-text">ritmo perfeito.</span></h2>
                     <p>No mercado de alto padrão, a escolha de uma lente ou um frame a mais na edição não são detalhes
                         estéticos. São a diferença entre o seu cliente assistir até o final ou rolar o feed.</p>
@@ -351,6 +218,15 @@
                         </div>
                     </div>
                     <div class="client-mini-card">
+                        <img src="https://img.youtube.com/vi/6zhMjnNMk-0/maxresdefault.jpg?v=novo" alt="Veigh"
+                            class="client-mini-photo"
+                            onerror="this.onerror=null; this.src='https://img.youtube.com/vi/6zhMjnNMk-0/hqdefault.jpg';">
+                        <div class="client-info">
+                            <h4>Veigh</h4>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="client-mini-card">
                         <img src="https://mir-s3-cdn-cf.behance.net/projects/404/497da4231662377.Y3JvcCwyMDEzLDE1NzUsMTA5LDA.jpg"
                             alt="Kyra Gracie" class="client-mini-photo">
                         <div class="client-info">
@@ -389,6 +265,15 @@
                             onerror="this.onerror=null; this.src='https://img.youtube.com/vi/z_Ohu6l46H0/hqdefault.jpg';">
                         <div class="client-info">
                             <h4>Xamã</h4>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="client-mini-card">
+                        <img src="https://img.youtube.com/vi/6zhMjnNMk-0/maxresdefault.jpg?v=novo" alt="Veigh"
+                            class="client-mini-photo"
+                            onerror="this.onerror=null; this.src='https://img.youtube.com/vi/6zhMjnNMk-0/hqdefault.jpg';">
+                        <div class="client-info">
+                            <h4>Veigh</h4>
                             <p>Artista</p>
                         </div>
                     </div>
@@ -435,8 +320,8 @@
             <p style="margin-bottom: 2rem;">Se a sua marca precisa de um filmmaker que entrega desde a direção de
                 fotografia impecável até um corte final magnético, nós precisamos conversar.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/sidyfurtado/" target="_blank" class="social-btn">Instagram</a>
-                <a href="https://wa.link/qwrwaf" target="_blank" class="social-btn">WhatsApp</a>
+                <a href="https://www.instagram.com/sidyfurtado/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+                <a href="https://wa.link/qwrwaf" target="_blank" rel="noopener noreferrer" class="social-btn">WhatsApp</a>
             </div>
             <p>© 2026 Sidy Furtado. Todos os direitos reservados.</p>
         </div>
@@ -462,7 +347,7 @@
             offset: 100
         });
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
