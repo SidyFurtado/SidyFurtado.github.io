@@ -16,6 +16,32 @@
     scroll-behavior: smooth;
 }
 
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020105; /* Slightly darker than --bg-dark for depth */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-neon) 0%, var(--secondary-neon) 100%);
+    border-radius: 10px;
+    border: 3px solid #020105; /* Floating capsule effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--secondary-neon) 0%, var(--primary-neon) 100%);
+}
+
+/* Firefox Support */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-neon) #020105;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -703,45 +729,5 @@ header .logo .logo-second {
         width: 8px;
         height: 8px;
         margin-right: 8px;
-    }
-}
-
-/* Layout da seção Sobre com a foto */
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-image {
-    flex: 1;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.05);
-}
-
-.about-content {
-    flex: 1.2;
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        gap: 2rem;
     }
 }
