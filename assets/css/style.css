@@ -193,9 +193,49 @@ nav a:hover {
     animation: fadeInUp 1s ease 0.6s both;
 }
 
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-button--ghost {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+}
+
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 30px rgba(160, 32, 240, 0.7);
+}
+
+.cta-button--ghost:hover {
+    border-color: var(--primary-neon);
+    background: rgba(160, 32, 240, 0.12);
+}
+
+.trust-strip {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease 0.8s both;
+}
+
+.trust-strip span {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 0.55rem 0.85rem;
+    background: rgba(255, 255, 255, 0.035);
 }
 
 .portfolio {
@@ -415,6 +455,12 @@ footer {
 .social-btn:hover {
     background: var(--primary-neon);
     box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.social-btn--primary {
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    border-color: transparent;
+    box-shadow: 0 0 18px rgba(160, 32, 240, 0.35);
 }
 
 footer p {
@@ -694,6 +740,14 @@ footer p {
     text-align: left;
 }
 
+.service-kicker {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.42);
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin-bottom: 1.25rem;
+}
+
 .service-card h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
@@ -717,10 +771,25 @@ footer p {
 
     nav ul {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+
+    .cta-button {
+        width: min(100%, 320px);
+        text-align: center;
+        padding-inline: 1.5rem;
     }
 }
 

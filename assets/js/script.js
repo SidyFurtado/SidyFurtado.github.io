@@ -28,9 +28,11 @@ const modalOverlay = document.querySelector('.video-modal-overlay');
 document.querySelectorAll('.custom-lightbox-trigger').forEach(trigger => {
     trigger.addEventListener('click', function () {
         const videoSrc = this.getAttribute('data-src');
+        const isShorts = this.getAttribute('data-shorts') === 'true';
         const isYouTube = videoSrc.includes('youtube.com') || videoSrc.includes('youtube-nocookie.com');
 
         videoModal.classList.add('active');
+        videoModal.classList.toggle('shorts-modal', isShorts);
         document.body.style.overflow = 'hidden';
 
         const allowAttr = isYouTube
@@ -43,6 +45,7 @@ document.querySelectorAll('.custom-lightbox-trigger').forEach(trigger => {
 
 function closeModal() {
     videoModal.classList.remove('active');
+    videoModal.classList.remove('shorts-modal');
     modalIframeContainer.innerHTML = '';
     document.body.style.overflow = '';
 }
