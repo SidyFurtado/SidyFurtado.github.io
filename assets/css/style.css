@@ -463,54 +463,124 @@ footer p {
     animation: scrollMarquee 25s linear infinite;
 }
 
-.clients-track:hover {
-    animation-play-state: paused;
+/* Ensure infinite scroll never pauses on hover */
+.clients-track:hover,
+.clients-track-vertical:hover {
+    animation-play-state: running !important;
 }
 
-.client-mini-card {
-    display: flex;
+.clients-track-vertical {
+    display: inline-flex;
+    gap: 3rem;
+    animation: scrollMarquee 30s linear infinite;
+}
+
+.clients-track-brands {
+    animation: scrollMarquee 35s linear infinite;
+}
+
+.client-vertical-card {
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    min-width: max-content;
-    backdrop-filter: blur(5px);
-    transition: border-color 0.3s, box-shadow 0.3s;
+    gap: 0.8rem;
+    vertical-align: top;
+    white-space: normal;
+    width: 120px;
     cursor: default;
 }
 
-.client-mini-card:hover {
+.client-vertical-photo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.client-vertical-card:hover .client-vertical-photo-container {
+    transform: translateY(-5px);
     border-color: var(--primary-neon);
-    box-shadow: 0 0 15px rgba(160, 32, 240, 0.3);
+    box-shadow: 0 5px 15px rgba(160, 32, 240, 0.3);
 }
 
-.client-mini-photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.client-vertical-photo {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 2px solid var(--primary-neon);
 }
 
-.client-info {
-    text-align: left;
+.client-vertical-brand-logo {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    transition: filter 0.3s;
 }
 
-.client-info h4 {
-    font-size: 1rem;
-    color: var(--text-main);
-    margin: 0;
-    font-weight: 600;
+.logo-invert {
+    filter: invert(1) brightness(100);
 }
 
-.client-info p {
-    font-size: 0.75rem;
+.client-vertical-name {
+    font-size: 0.72rem;
+    font-weight: 800;
     color: var(--text-muted);
-    margin: 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.client-vertical-card:hover .client-vertical-name {
+    color: var(--text-main);
+}
+
+/* Styled brand text logo container */
+.brand-logo-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.1;
+    font-weight: 900;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.brand-logo-text-container.guudrun-logo {
+    font-size: 1rem;
+}
+
+.brand-logo-text-container.guudrun-logo .g-text {
+    font-weight: 900;
+}
+
+.brand-logo-text-container.guudrun-logo .r-text {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.brand-logo-text-container.guudrun-logo .tag {
+    font-size: 0.3rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.xcoach-x {
+    color: var(--primary-neon);
 }
 
 @keyframes scrollMarquee {
