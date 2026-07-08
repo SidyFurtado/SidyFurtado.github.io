@@ -522,6 +522,12 @@ footer p {
     transition: filter 0.3s;
 }
 
+.client-vertical-brand-logo[alt="DUX"] {
+    width: 85%;
+    height: 85%;
+}
+
+
 .logo-invert {
     filter: invert(1) brightness(100);
 }
