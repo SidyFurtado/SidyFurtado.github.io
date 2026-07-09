@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="725" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 430 725 500">
   <g
-     transform="translate(-60,-430)" style="fill:#000">
+     transform="translate(-60,-430)" style="fill:#fff">
         <path
            d="M 533.9435,756.70465 386.43318,500.34377 492.40483,439.4751 l 183.4283,317.22955 -141.88963,0" />
         <path
