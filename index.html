@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://img.youtube.com; frame-src https://www.youtube-nocookie.com; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Sidy Furtado | Filmmaker em Natal/RN</title>
     <meta name="description"
         content="Filmmaker em Natal/RN. Filmo e edito projetos para marcas, artistas e eventos: aftermovie, documentário, campanha e conteúdo vertical.">
@@ -32,14 +35,7 @@
     <meta name="twitter:description" content="Aftermovie, documentário, campanha e conteúdo vertical.">
     <meta name="twitter:image" content="https://img.youtube.com/vi/z_Ohu6l46H0/maxresdefault.jpg">
 
-    <script>
-        /* marca que há JS (a janela de projeção só fecha se puder reabrir)
-           e garante a abertura mesmo se o script principal não carregar */
-        (function (d) {
-            d.documentElement.className += ' js';
-            setTimeout(function () { if (d.body) d.body.classList.add('gate-lifted'); }, 3000);
-        })(document);
-    </script>
+    <script src="assets/js/boot.js?v=5.0"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +45,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..700&family=Instrument+Sans:wght@400..600&family=DM+Mono:wght@400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=4.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
 
     <script type="application/ld+json">
         {
@@ -427,9 +423,9 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    <script src="assets/js/script.js?v=4.0" defer></script>
+    <script src="assets/js/vendor/gsap.min.js" defer></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/script.js?v=5.0" defer></script>
 </body>
 
 </html>

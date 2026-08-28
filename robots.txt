@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sidyfurtado.github.io/portfolio/sitemap.xml
+Sitemap: https://sidyfurtado.github.io/sitemap.xml
